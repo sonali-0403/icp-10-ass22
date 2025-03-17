@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        .container{
+            width: 350px;
+            padding: 20px;
+            background-color: rgb(200, 193, 193);
+            display: block;
+            margin: 30px auto;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+
+        .bulb1{
+            height: 200px;
+            display: block;
+            margin: 10px auto;
+            
+
+        }
+
+        .buttons{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        
+
+        }
+
+        .btn-toggle{
+            width:100px;
+            font-size: 20px;
+            border: none;
+            border-radius: 15px;
+            padding: 2px 10px;
+            background-color: black;
+            color: white;
+
+        }
+
+        .btn-off{
+            background-color: brown;
+            margin-right: 70px;
+        }
+
+        .btn-on{
+         background-color: green;
+         margin-right: 50px;
+        }
+
+      
+    </style>
+
+</head>
+<body>
+    <div class="container">
+    <img src="download.jpg" id="bulb" class="bulb1"/>
+   
+    <div class="buttons" >
+        <button class="btn-toggle btn-off" onclick="off()">Off</button>
+        <button class="btn-toggle btn-on" onclick="on()">On</button>
+    </div>
+    </div>
+
+     <script>
+       const bulbElement = document.getElementById("bulb");
+
+
+       function on(){
+        bulbElement.src = "download.jpg";
+       }
+
+       function off(){
+        bulbElement.src = "off.jpg";
+       }
+     </script>
+</body>
+</html>
